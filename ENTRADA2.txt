@@ -1,0 +1,1 @@
+( x v ¬y v z ) ^ ( x v y v z ) ^ ( ¬x v ¬y v ¬z ) ^ ( ¬x v y v ¬z ) 
