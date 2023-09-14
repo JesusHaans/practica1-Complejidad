@@ -7,6 +7,10 @@ Para usar Estos Algoritmos descrito en el archivo PRACTICA1.pdf, se debe de tene
 estando en terminal o cmd en la altura donde se encuentra este archivo, se debe de ejecutar el siguiente comando para ejecutar el archivo:
 
 ``` BASH
-$ python3 main.py
+$ python3 1C.py
+```
+o
+``` BASH
+$ python3 2C.py
 ```
 Si se necesita  cambiar los ejemplares sobre los cuales se ejecutaran los algoritmos, se debe de cambiar los archivos "ENTRADA1.txt" y "ENTRADA2.txt" colocar los ejemplares que se deseen, cada uno siguiendo la forma en la que esta el ejemplar original.

@@ -1,1 +1,1 @@
-(xv¬yvz)^(xvyvz)^(¬xv¬yv¬z)^(¬xvyv¬z) 
+(x+-y+z)*(x+y+z)*(-x+-y+-z)*(-x+y+-z)
