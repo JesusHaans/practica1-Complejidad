@@ -20,9 +20,18 @@ for var in variablesRepetidas:
         variables.append(var)
 conjunciones = linea.split('*')
 
-def itsFalse(variables):
+#
+def itsFalse(variables,varDic):
+    result  = False
     for var in variables:
-        print(var)
+        if var[0] == '-':
+            result = result or  (not varDic[var[1:]])
+        else:
+            result = result or (varDic[var])
+    if result == True: 
+        return False 
+    else:
+        return True 
 
 def procesarClausula(cadena):
     preCadena = cadena.replace('(','')
@@ -43,12 +52,15 @@ def faceAdivinadora(variables, varDic):
     print("Terminando la fase adivinadora los valores quedan asi...")
     print("Variables: " + str(varDic))
 
-def faceVerificadora(varDic, conjunciones):
+def faceVerificadora(varDic, conjunciones, linea):
+    print("¿" + str(varDic) +" satisface la formula: " + linea + "?")
     for c in conjunciones:
         variables = procesarClausula(c)
-        if itsFalse(variables):
-            return False
+        if itsFalse(variables,varDic):
+            print("False")
+            return
+    print("True")
 
 faceAdivinadora(variables, varDic)
-#faceVerificadora(varDic,conjunciones)
-itsFalse(['x', '-y', 'z'])
+faceVerificadora(varDic,conjunciones,linea)
+#itsFalse(['x', '-y', 'z'],varDic)
