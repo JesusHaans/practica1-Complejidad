@@ -1,5 +1,6 @@
 #imports
 import random
+import sys
 
 # Variables globales
 FILE_NAME = "ENTRADA1.txt"
@@ -23,6 +24,16 @@ while (linea != ''):
 
 #Trabajamos str Vertices
 vertices = strVertices.split(',')
+
+#verificamos que tengamos entre 10 y 20 vertices
+if not (len(vertices) >= 10 and len(vertices) <= 20):
+    print("La grafica no tiene el tamaño necesario en vertices")
+    sys.exit(0)
+    
+#verificamos que tengamos entre 20 y 40 aristas
+if not (len(aristas) > 2*len(vertices)):
+    print("La grafica no tiene el tamaño necesario en aristas")
+    sys.exit(0)
 
 #Hagamos la fase adivinadora
 

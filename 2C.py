@@ -1,6 +1,7 @@
 #imports
 import random
 import re
+import sys
 
 # Variables globales
 FILE_NAME = "ENTRADA2.txt"
@@ -19,6 +20,12 @@ for var in variablesRepetidas:
     if var not in variables:
         variables.append(var)
 conjunciones = linea.split('*')
+
+
+#verificamos que tengamos entre 3 y 10 clausulas
+if not(len(conjunciones) >= 3 and len(conjunciones) <= 10):
+    print("La formula no tiene el tamaño necesario en conjunciones")
+    sys.exit(0)
 
 #
 def itsFalse(variables,varDic):
